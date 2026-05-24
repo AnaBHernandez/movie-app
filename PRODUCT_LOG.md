@@ -98,4 +98,5 @@ Este documento registra cronológicamente las decisiones de arquitectura, resolu
 - **ESTADO:** TRABAJO COMPLETADO (RESOLVED).
 - **MECÁNICA:** Extracción síncrona de parámetros mediante `ActivatedRoute`, saneamiento de nulos para TypeScript e hidratación dinámica del DOM mediante señales nativas.
 - **ENTREGABLE:** Arquitectura base de la Unidad 5 certificada con cero errores, cero advertencias de compilación y renderizado visual impecable.
+ **REFACTORIZACIÓN VISUAL:** Ajuste del pipeline de UI migrando hacia un entorno claro (bg-slate-50) con tarjetas blancas independientes para asegurar un contraste óptimo (text-slate-900) y descanso visual en lecturas prolongadas.
 
