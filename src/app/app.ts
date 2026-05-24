@@ -1,10 +1,10 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterOutlet } from '@angular/router'; // Conservamos solo el portal principal
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet], // Limpio de RouterLink y RouterLinkActive
   templateUrl: './app.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

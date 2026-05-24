@@ -1,31 +1,36 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
   template: `
-    <nav class="bg-slate-900 text-white p-4 flex gap-6 items-center shadow-lg">
-      <span class="text-xl font-black tracking-wider text-indigo-400 mr-4">FILM-TPO</span>
+    <div class="min-h-screen bg-zinc-950 flex flex-col font-sans antialiased text-zinc-200">
       
-      <a routerLink="/home" 
-         routerLinkActive="text-indigo-400 font-bold underline decoration-2 underline-offset-8" 
-         [routerLinkActiveOptions]="{ exact: true }"
-         class="hover:text-slate-300 transition-colors duration-200">Inicio</a>
-         
-      <a routerLink="/movies" 
-         routerLinkActive="text-indigo-400 font-bold underline decoration-2 underline-offset-8"
-         class="hover:text-slate-300 transition-colors duration-200">Películas</a>
-    </nav>
+      <nav class="bg-red-600 text-white px-6 py-4 shadow-xl sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto flex items-center justify-between">
+          
+          <a routerLink="/" class="text-xl font-black tracking-tighter uppercase">
+            FILM-TPO
+          </a>
+          
+          <div class="flex items-center gap-6 text-xs font-black uppercase tracking-wider">
+            <a routerLink="/home" routerLinkActive="text-zinc-900" class="hover:text-zinc-100 transition-colors">Inicio</a>
+            <a routerLink="/movies" routerLinkActive="text-zinc-900" class="hover:text-zinc-100 transition-colors">Películas</a>
+          </div>
+          
+        </div>
+      </nav>
 
-    <main class="container mx-auto mt-6 px-4 min-h-[70vh]">
-      <router-outlet></router-outlet>
-    </main>
+      <main class="flex-grow max-w-5xl mx-auto w-full p-6 md:p-8 bg-transparent">
+        <router-outlet></router-outlet>
+      </main>
 
-    <footer class="bg-slate-100 border-t border-slate-200 text-center p-4 mt-12 text-xs text-slate-500 font-medium">
-      &copy; 2026 Ecosistema Film-TPO. Todos los derechos reservados.
-    </footer>
+      <footer class="border-t border-zinc-900 py-6 text-center text-xs text-zinc-600 mt-auto">
+        &copy; 2026 Ecosistema Film-TPO. Todos los derechos reservados.
+      </footer>
+    </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

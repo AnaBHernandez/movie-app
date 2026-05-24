@@ -1,4 +1,3 @@
-// src/app/views/not-found.ts
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({

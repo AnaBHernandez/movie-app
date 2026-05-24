@@ -1,6 +1,5 @@
-- Estado en GitHub: Inexistente (Creación desde cero requerida)
-- URL de destino: https://github.com/AnaBHernandez/movie-app
-- Regla de creación web: Repositorio 100% vacío (Sin README, sin licencia)
-- Puntero local: origin acoplado a la URL del perfil verificado
-- Rama base en la nube: main (andamiaje limpio de pnpm)
-- Rama de desarrollo activa: feature/http bifurcada tras el push
+- Diagnóstico: Petición HTTP asíncrona disparada antes de la hidratación de inputs del Router
+- Operador de rescate: filter() importado de 'rxjs/operators'
+- Regla de filtrado: Excluir proactivamente valores falsy o strings equivalentes a 'undefined'
+- Archivo modificado: src/app/views/movie-details.ts
+- Comportamiento final: Eliminación del error 404 y renderizado automático del JSON
